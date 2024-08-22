@@ -200,7 +200,6 @@
                             </center>
                         </div>
 
-                        <!-- Footer -->
                         <footer class="footer">
                             Website by kudo.dev
                         </footer>
@@ -230,23 +229,6 @@
             }
         });
 
-        // Chặn phím F12 và Ctrl + U
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'F12' || (event.ctrlKey && event.key === 'u')) {
-                event.preventDefault();
-                event.stopPropagation();
-                alert('Chức năng này bị vô hiệu hóa.');
-            }
-        });
-
-        // Chặn chuột phải
-        document.addEventListener('contextmenu', function (event) {
-            event.preventDefault();
-            event.stopPropagation();
-            alert('Chức năng chuột phải bị vô hiệu hóa.');
-        });
-
-        // Hàm sao chép vào clipboard
         function copyToClipboard(selector) {
             var text = document.querySelector(selector).innerText;
             var textarea = document.createElement('textarea');
@@ -258,34 +240,22 @@
             alert('Đã sao chép: ' + text);
         }
 
-        // Hiển thị thông báo
         function showAlert() {
             var alertMessage = document.getElementById('alertMessage');
             alertMessage.style.display = 'block';
         }
 
-        // Đóng thông báo
         function closeAlert() {
             var alertMessage = document.getElementById('alertMessage');
             alertMessage.style.display = 'none';
         }
 
-        // Hiển thị thông báo khi trang được tải
         window.onload = function() {
             showAlert();
         }
     </script>
 
-    <div class="custom-context-menu" id="contextMenu">
-        <ul>
-            <li><a href="thongbao.html" style="color: #fff;">Tùy chọn 1</a></li>
-            <li><a href="thongbao.html" style="color: #fff;">Tùy chọn 2</a></li>
-        </ul>
-    </div>
+<a href="//www.dmca.com/Protection/Status.aspx?ID=c711bb14-8723-44a1-a408-df8fcd65e5bb" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/DMCA_logo-grn-btn120w.png?ID=c711bb14-8723-44a1-a408-df8fcd65e5bb"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
 
-    <div class="alert-message" id="alertMessage">
-        Chức năng này đã tạm bị khóa bởi @kudo
-        <button onclick="closeAlert()">Đóng</button>
-    </div>
 </body>
 </html>
