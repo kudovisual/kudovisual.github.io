@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kudo</title>
+    <title>Kudo | v1.2.3(remake)</title>
     <link href="/assets/img/shortcut-icon.png" rel="shortcut icon" type="image/x-icon" />
     <meta content="Kudo" property="og:title" />
-    <meta content="Tôi là Developer" property="og:description" />
+    <meta content="kudodevhihi" property="og:description" />
     <meta content="/assets/img/banner2.jpg" property="og:image" />
     <meta content="website" property="og:type" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.css" />
@@ -16,7 +16,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/assets/styles/style.css" />
     <style>
-
         .alert-message {
             display: none;
             position: fixed;
@@ -37,39 +36,9 @@
             margin-left: 10px;
             cursor: pointer;
         }
-        .alert-message {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 10px;
-            background: #e74c3c;
-            color: #fff;
-            text-align: center;
-            font-size: 1em;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-        .alert-message button {
-            background: #fff;
-            color: #e74c3c;
-            border: none;
-            padding: 5px 10px;
-            margin-left: 10px;
-            cursor: pointer;
-        }
-        .alert-message.green {
-            background: #2ecc71;
-        }
     </style>
 </head>
 <body>
-    <div class="alert-message" id="alertMessage">
-        <span id="alertText"></span>
-        <button id="retryButton">Thử lại</button>
-    </div>
-
     <div class="snowflake"><img src="/assets/img/hoadao.png" /></div>
     <div class="snowflake"><img src="/assets/img/hoadao.png" /></div>>
     <div class="snowflake"><img src="/assets/img/hoadao.png" /></div>
@@ -135,7 +104,7 @@
                 <div class="col-12">
                     <div class="box box-content">
                         <h3 class="title title--h2 first-title title__separate">Tiểu sử</h3>
-                        <p>Developers Python, HTML, CSS, JS,.. - Designer</p>
+                        <p>Developers Python, HTML, CSS, JS,.. - Designer.<a href="/tools/spamtool">Spam Tool tại đây</a></p>
                         <div class="mt-2">
                             <h3 class="title title--h2 first-title title__separate">Thông tin thanh toán</h3>
                             <div class="row">
@@ -210,7 +179,7 @@
 
                         <!-- Footer -->
                         <footer class="footer">
-                            Website by kudodevhihi | Server: server:5500
+                            Website by <b>kudodevhihi</b> | Server: <b>server:5500</b> | Web Version: <b>v1.2.3(remake)</b>
                         </footer>
                     </div>
                 </div>
@@ -282,29 +251,8 @@
         window.onload = function() {
             showAlert();
         }
-        function checkConnection() {
-            if (navigator.onLine) {
-                document.getElementById('alertText').textContent = "Máy chủ 'server:5500' đã trở lại";
-                document.getElementById('alertMessage').classList.add('green');
-                document.getElementById('retryButton').textContent = "Kết nối";
-                document.getElementById('retryButton').onclick = function() {
-                    window.location.reload(); // Tải lại trang khi nhấn Kết nối
-                };
-            } else {
-                document.getElementById('alertText').textContent = "Chúng tôi không thể kết nối đến máy chủ. Vui lòng kiểm tra kết nối mạng của bạn và thử lại sau.";
-                document.getElementById('alertMessage').classList.remove('green');
-                document.getElementById('retryButton').onclick = function() {
-                    window.location.reload(); // Thử lại khi nhấn Thử lại
-                };
-            }
-            document.getElementById('alertMessage').style.display = 'block';
-        }
-
-        window.addEventListener('online', checkConnection);
-        window.addEventListener('offline', checkConnection);
-
-        checkConnection();
     </script>
 
+    </div>
 </body>
 </html>
