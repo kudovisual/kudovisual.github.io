@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kudo | v1.2.3(remake)</title>
+    <title>Kudo | v1.2.4</title>
     <link href="/assets/img/shortcut-icon.png" rel="shortcut icon" type="image/x-icon" />
     <meta content="Kudo" property="og:title" />
     <meta content="kudodevhihi" property="og:description" />
@@ -179,7 +179,7 @@
 
                         <!-- Footer -->
                         <footer class="footer">
-                            Website by <b>kudodevhihi</b> | Server: <b>server:5500</b> | Web Version: <b>v1.2.3(remake)</b>
+                            Website by <b>kudodevhihi</b> | Server: <b>server:5500</b> | Web Version: <b>v1.2.4</b>
                         </footer>
                     </div>
                 </div>
@@ -222,18 +222,6 @@
             event.stopPropagation();
             alert('Chức năng chuột phải bị vô hiệu hóa.');
         });
-
-        // Hàm sao chép vào clipboard
-        function copyToClipboard(selector) {
-            var text = document.querySelector(selector).innerText;
-            var textarea = document.createElement('textarea');
-            textarea.value = text;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
-            alert('Đã sao chép: ' + text);
-        }
 
         // Hiển thị thông báo
         function showAlert() {
