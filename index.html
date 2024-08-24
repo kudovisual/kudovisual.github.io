@@ -64,16 +64,18 @@
     </style>
 </head>
 <body>
-    <div class="snowflake"><img src="/assets/img/hoamai.svg" /></div>
     <div class="snowflake"><img src="/assets/img/hoadao.png" /></div>
-    <div class="snowflake"><img src="/assets/img/hoamai.svg" /></div>
+    <div class="snowflake"><img src="/assets/img/hoadao.png" /></div>>
     <div class="snowflake"><img src="/assets/img/hoadao.png" /></div>
-    <div class="snowflake"><img src="/assets/img/hoamai.svg" /></div>
     <div class="snowflake"><img src="/assets/img/hoadao.png" /></div>
-    <div class="snowflake"><img src="/assets/img/hoamai.svg" /></div>
+    <div class="snowflake"><img src="/assets/img/hoamai.png" /></div>
+    <div class="snowflake"><img src="/assets/img/hoamai.png" /></div>
+    <div class="snowflake"><img src="/assets/img/hoamai.png" /></div>
+    <div class="snowflake"><img src="/assets/img/hoamai.png" /></div>
+    <div class="snowflake"><img src="/assets/img/hoamai.png" /></div>
     <div class="snowflake"><img src="/assets/img/hoadao.png" /></div>
-    <div class="snowflake"><img src="/assets/img/hoamai.svg" /></div>
-
+    <div class="snowflake"><img src="/assets/img/hoadao.png" /></div>
+    <div class="snowflake"><img src="/assets/img/hoamai.png" /></div>
     <div class="preloader">
         <div class="preloader__wrap">
             <div class="circle-pulse">
@@ -99,7 +101,7 @@
                     </div>
                     <div class="header__base-info">
                         <h2 class="title titl--h1 Ubuntu">
-                            <b>Kudo <img src="/assets/img/tich-xanh.png" style="height: 24px;"></b>
+                            <b>@kudo <img src="/assets/img/tich-xanh.png" style="height: 24px;"></b>
                         </h2>
                         <div class="skill-item" style="color: #ef9d64;"><b>Developers </b></div>
                         <ul class="header__social">
@@ -117,8 +119,8 @@
                 </div>
                 <div class="header__right">
                     <ul class="header__contact">
-                        <li><span class="overhead">Email</span>vozcopyright@gmail.com </li>
-                        <li><span class="overhead">Website</span>kudovisual.github.io </li>
+                        <li><span class="overhead">Email</span>kudodevhihi@gmail.com</li>
+                        <li><span class="overhead">Website</span>kudovisual.github.io</li>
                     </ul>
                 </div>
             </header>
@@ -127,7 +129,7 @@
                 <div class="col-12">
                     <div class="box box-content">
                         <h3 class="title title--h2 first-title title__separate">Tiểu sử</h3>
-                        <p>Developers Python, HTML, CSS, JS,.. - Làm website siêu rẻ</p>
+                        <p>Developers Python, HTML, CSS, JS,.. - Designer</p>
                         <div class="mt-2">
                             <h3 class="title title--h2 first-title title__separate">Thông tin thanh toán</h3>
                             <div class="row">
@@ -200,6 +202,7 @@
                             </center>
                         </div>
 
+                        <!-- Footer -->
                         <footer class="footer">
                             Website by kudo.dev
                         </footer>
@@ -229,6 +232,23 @@
             }
         });
 
+        // Chặn phím F12 và Ctrl + U
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'F12' || (event.ctrlKey && event.key === 'u')) {
+                event.preventDefault();
+                event.stopPropagation();
+                alert('Chức năng này bị vô hiệu hóa.');
+            }
+        });
+
+        // Chặn chuột phải
+        document.addEventListener('contextmenu', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            alert('Chức năng chuột phải bị vô hiệu hóa.');
+        });
+
+        // Hàm sao chép vào clipboard
         function copyToClipboard(selector) {
             var text = document.querySelector(selector).innerText;
             var textarea = document.createElement('textarea');
@@ -240,22 +260,34 @@
             alert('Đã sao chép: ' + text);
         }
 
+        // Hiển thị thông báo
         function showAlert() {
             var alertMessage = document.getElementById('alertMessage');
             alertMessage.style.display = 'block';
         }
 
+        // Đóng thông báo
         function closeAlert() {
             var alertMessage = document.getElementById('alertMessage');
             alertMessage.style.display = 'none';
         }
 
+        // Hiển thị thông báo khi trang được tải
         window.onload = function() {
             showAlert();
         }
     </script>
 
-<a href="//www.dmca.com/Protection/Status.aspx?ID=c711bb14-8723-44a1-a408-df8fcd65e5bb" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/DMCA_logo-grn-btn120w.png?ID=c711bb14-8723-44a1-a408-df8fcd65e5bb"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+    <div class="custom-context-menu" id="contextMenu">
+        <ul>
+            <li><a href="thongbao.html" style="color: #fff;">Tùy chọn 1</a></li>
+            <li><a href="thongbao.html" style="color: #fff;">Tùy chọn 2</a></li>
+        </ul>
+    </div>
 
+    <div class="alert-message" id="alertMessage">
+        Chức năng này đã tạm bị khóa bởi @kudo
+        <button onclick="closeAlert()">Đóng</button>
+    </div>
 </body>
 </html>

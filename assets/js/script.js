@@ -96,3 +96,14 @@ toggleSwitch.addEventListener("change", switchTheme);
         n();
 })(window, document);
 
+function checkConnection() {
+    if (!navigator.onLine) {
+        window.location.href = 'error.html'; // Chuyển hướng đến error.html
+    }
+}
+
+// Kiểm tra kết nối ngay khi trang được tải
+window.onload = checkConnection;
+
+// Theo dõi sự kiện mất mạng
+window.addEventListener('offline', checkConnection);
