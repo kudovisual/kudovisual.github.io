@@ -1,6 +1,6 @@
 /**
- * @Mode: NgocMinhIT
- * @Website: TrumSource.COM
+ * @Mode: Kudo
+ * @Website: KudoVisual.GitHub.IO
 **/
 
 // Copy To Clipboard 
@@ -10,7 +10,7 @@ function copyToClipboard(element) {
     $temp.val($(element).text()).select();
     document.execCommand("copy");
     $temp.remove();
-    Swal.fire("Thông báo", "Copy thành công!", "success");
+    Swal.fire("Thông báo", "Sao chép thành công!", "success");
 }
 // Format url 
 var url = window.location.href;
@@ -98,12 +98,24 @@ toggleSwitch.addEventListener("change", switchTheme);
 
 function checkConnection() {
     if (!navigator.onLine) {
-        window.location.href = 'error.html'; // Chuyển hướng đến error.html
+        window.location.href = 'error.html';
     }
 }
 
-// Kiểm tra kết nối ngay khi trang được tải
 window.onload = checkConnection;
 
-// Theo dõi sự kiện mất mạng
 window.addEventListener('offline', checkConnection);
+
+window.onload = function() {
+    showAlert();
+}
+
+function showAlert() {
+    var alertMessage = document.getElementById('alertMessage');
+    alertMessage.style.display = 'block';
+}
+
+function closeAlert() {
+    var alertMessage = document.getElementById('alertMessage');
+    alertMessage.style.display = 'none';
+}
