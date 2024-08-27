@@ -1,0 +1,152 @@
+body {
+    background: #f4f4f9;
+    color: #333;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, li, p {
+    margin: 0 0 16px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: #333;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: #555;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: #666;
+}
+
+h4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    color: #777;
+}
+
+h5, h6 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    color: #888;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover, a[rel~=nofollow] {
+    color: #0056b3;
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+a[rel~=nofollow] {
+    color: #0056b3;
+}
+
+a[rel~=nofollow]:hover {
+    text-decoration: none;
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.page {
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    padding: 20px 0;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header .title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.translations-list-container {
+    padding-bottom: 8px;
+    margin: 0 0 16px;
+}
+
+.translations-list-container .translations-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.translations-list-container .translations-list .translations-list-item {
+    display: inline-block;
+    padding: 0;
+    margin: 0 8px 8px 0;
+    font-weight: 700;
+    color: #0056b3;
+}
+
+.translations-list-container .translations-list .translations-list-item a {
+    display: inline-block;
+    color: #fff;
+    background: #0056b3;
+    border: 1px solid #0056b3;
+    border-radius: 25px;
+    padding: 6px 20px;
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.translations-list-container .translations-list .translations-list-item a:hover {
+    background: #004494;
+    border-color: #004494;
+    transform: scale(1.05);
+}
+
+.translations-content-container {
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.footer {
+    border-top: 1px solid #ddd;
+    margin: 32px 0 0;
+    padding: 20px 0;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
