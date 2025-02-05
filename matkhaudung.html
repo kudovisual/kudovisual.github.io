@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác nhận thành công</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff00, #ff0000);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            margin-bottom: 15px;
+        }
+        button {
+            background: #ff4081;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #e91e63;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bạn đã nhập mật khẩu đúng!</h1>
+        <button onclick="returnToNewTab()">Trở về tab mới và sử dụng</button>
+        <button onclick="youtube()">Đến YouTube</button>
+        <button onclick="youtubeChannel()">My YouTube Channel</button>
+        <h4>(©) 2025 kudodz.</h4>
+    </div>
+    <script>
+        function returnToNewTab() {
+            window.open('chrome://newtab', '_blank');
+            window.close();
+        }
+        function youtube() {
+            window.open('https://www.youtube.com/', '_blank');
+            window.close();
+        }
+        function youtubeChannel() {
+            window.open('https://www.youtube.com/channel/UCKTgDSQ_wFRcM4Qdy-wqEHA', '_blank');
+            window.close();
+        }
+
+    </script>
+</body>
+</html>
